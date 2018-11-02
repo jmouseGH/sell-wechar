@@ -13,7 +13,11 @@ public class ResultVoUtil {
         return resultVo ;
     }
 
-    public static ResultVo succcess (  ){
+    /**
+     * 返回错误 信息
+     * @return
+     */
+    public static ResultVo error  (  ){
         ResultVo resultVo = new ResultVo() ;
         resultVo.setMsg("error");
         resultVo.setCode(1);
@@ -22,7 +26,13 @@ public class ResultVoUtil {
         return resultVo ;
     }
 
-    public static ResultVo succcess (Integer code , String msg ){
+    /**
+     * 自定义 返回类型
+     * @param code
+     * @param msg
+     * @return
+     */
+    public static ResultVo custom (Integer code , String msg ){
         ResultVo resultVo = new ResultVo() ;
         resultVo.setMsg(msg);
         resultVo.setCode(code);

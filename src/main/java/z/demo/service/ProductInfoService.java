@@ -2,6 +2,7 @@ package z.demo.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import z.demo.dto.CartDTO;
 import z.demo.entity.ProductInfo;
 
 import java.util.List;
@@ -26,4 +27,8 @@ public interface ProductInfoService {
     ProductInfo save ( ProductInfo productInfo );
 
     // 库存操作
+
+    void increaseStock (List<CartDTO> cartDTOList) ;
+
+    void decreaseStock ( List<CartDTO> cartDTOList ) ;
 }
